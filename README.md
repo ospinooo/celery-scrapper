@@ -15,13 +15,15 @@ Activate Enviroment
 source .venv/bin/activate
 ```
 
-Run
+## Run
 ```sh
 sudo docker-compose up
 sudo docker-compose up --scale worker=5 # 5 workers
 ```
 
-## Manual
+
+### Manually
+
 Terminal 1. (BROCKER)
 ```sh
 docker run  -p 6379:6379 redis # BROCKER
@@ -32,7 +34,7 @@ Terminal 2. (WORKER)
 celery -A scrapper worker --loglevel=info
 ```
 
-Terminal 3.
+Terminal 3. (SUBMIT JOB)
 ```sh
 python
 >>> from scrapper import do_work
