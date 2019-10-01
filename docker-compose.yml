@@ -1,0 +1,30 @@
+version: '3.2'
+services:
+  worker:
+    build:
+        context: .
+        dockerfile: dockerfile
+    volumes:
+        - type: bind
+          source: .
+          target: /app
+    links:
+        - redis
+    depends_on:
+        - redis
+  redis:
+    hostname: redis
+    image: redis:latest
+    environment:
+        # - RABBITMQ_DEFAULT_USER=myuser
+        # - RABBITMQ_DEFAULT_PASS=mypassword
+    ports:
+        - "6379:6379"
+  rproxy:
+    hostname: rproxy
+    image: anuragrana/rotating-proxy
+    environment:
+        - tors=25
+    ports:
+        - "5566:5566"
+        - "4444:4444"
