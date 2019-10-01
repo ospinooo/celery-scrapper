@@ -15,9 +15,29 @@ Activate Enviroment
 source .venv/bin/activate
 ```
 
-
 Run
 ```sh
 sudo docker-compose up
 sudo docker-compose up --scale worker=5 # 5 workers
 ```
+
+## Manual
+Terminal 1. (BROCKER)
+```sh
+docker run  -p 6379:6379 redis # BROCKER
+```
+
+Terminal 2. (WORKER)
+```
+celery -A scrapper worker --loglevel=info
+```
+
+Terminal 3.
+```sh
+python
+>>> from scrapper import do_work
+>>> do_work.delay(5)
+<AsyncResult: c2c13c5b-dbec-43da-878e-83b6114ee944>
+```
+> It will appear the result in the worker log
+
