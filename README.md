@@ -4,15 +4,15 @@
 
 Install
 ```sh
-> pip install virtualenv
-> which python
-/path/to/python
-> virtualenv --python=/path/to/python .venv
+pip install virtualenv
+which python
+>>> /path/to/python
+virtualenv --python=/path/to/python .venv
 ```
 
 Activate Enviroment
 ```sh
-source .venv/bin/activat
+source .venv/bin/activate
 ```
 
 
