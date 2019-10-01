@@ -1,4 +1,4 @@
-from .scrapper import do_work
+from scrapper.tasks import do_work
 
 if __name__ == '__main__':
     for i in range(10):
