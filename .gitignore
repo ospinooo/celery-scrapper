@@ -143,7 +143,10 @@ dmypy.json
 
 ## VENV
 
-.venv
+.direnv
 
 ## notes
 notes.md
+
+## Env vars
+.envrc_vars
