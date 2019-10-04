@@ -1,0 +1,6 @@
+# Modify the context to exclude all files specified here
+.direnv
+.env
+.envrc
+.envrc_vars
+__pycache__
