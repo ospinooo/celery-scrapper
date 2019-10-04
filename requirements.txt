@@ -1,3 +1,11 @@
 celery
 redis
 tweepy
+
+
+# Sentiment Analysis
+vaderSentiment 
+googletrans
+
+# envs
+python-dotenv
