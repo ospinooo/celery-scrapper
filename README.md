@@ -43,3 +43,8 @@ python
 ```
 > It will appear the result in the worker log
 
+### Bibliography
+- [almost-real-time-twitter-sentiment-analysis-with-tweep-vader](https://towardsdatascience.com/almost-real-time-twitter-sentiment-analysis-with-tweep-vader-f88ed5b93b1c)
+  - [Almost](https://github.com/Mjrovai/Python4DS/blob/master/Almost_Real_Time_Twitter_Sentiment_Analysis/almost_real_time_twitter_sentiment_analysis_EXT.ipynb)
+- [Vander](https://medium.com/analytics-vidhya/simplifying-social-media-sentiment-analysis-using-vader-in-python-f9e6ec6fc52f)
+
