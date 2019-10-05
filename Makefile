@@ -15,5 +15,8 @@ build_celery:
 	docker build . -t ${CELERY_TAG} -f docker/worker.Dockerfile
 
 run_celery: build_celery
-	docker run -it ${CELERY_TAG}
+	docker run -it ${CELERY_TAG}  
 
+
+run:
+	docker-compose up --build	
