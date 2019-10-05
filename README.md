@@ -26,7 +26,7 @@ sudo docker-compose up --scale worker=5 # 5 workers
 
 Terminal 1. (BROCKER)
 ```sh
-docker run  -p 6379:6379 redis # BROCKER
+docker run -p 6379:6379 redis # BROCKER
 ```
 
 Terminal 2. (WORKER)
