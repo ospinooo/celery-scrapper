@@ -2,6 +2,15 @@
 # Scrapper
 
 
+## Personal Project:
+Learn about:
+- Celery
+- Docker, Docker-Compose
+- Extra:
+  - mailing
+  - twitter API.
+
+
 Install
 ```sh
 pip install virtualenv
