@@ -1,6 +1,8 @@
 version: '3.2'
 
 services:
+
+  # Workers
   worker:
     build:
       context: .
@@ -11,7 +13,9 @@ services:
       - redis
     depends_on:
       - redis
+      - mongo
 
+  # Twiiter subscriber
   sub:
     build: 
       context: .
@@ -22,10 +26,15 @@ services:
       - redis
     depends_on:
       - redis
+      - mongo
 
+  # Extra services
   redis:
     image: redis
-    # volumes:
-    #   - /Users:/twitter
     ports:
-      - 6379:6379
+      - "6379:6379"
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
