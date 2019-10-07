@@ -7,4 +7,6 @@ ADD ./src/ ./src/
 
 EXPOSE 6379
 
-ENTRYPOINT celery -A src.worker worker --loglevel=info -E
+WORKDIR src
+
+ENTRYPOINT celery -A app worker --loglevel=info -E
