@@ -1,14 +1,34 @@
 
 # Scrapper
 
+![](docs/twitter-scrapper.svg)
 
 ## Personal Project:
 Learn about:
 - Celery
 - Docker, Docker-Compose
+- Mongodb
 - Extra:
   - mailing
   - twitter API.
+
+
+
+This project consist of a sentiment analysis about the:
+- we filter the tweets and send them to 
+- Stock predictions based on news.
+
+- Number of tweets of a specific topic.
+- 
+
+GOAL:
+- Create an inform every hour of the last hour.
+  - DIfferent **topics**, 
+    - good comments  
+    - bad comments
+    - total comments
+    - Sum of followers of bad comments
+    - Sum of followers of good comments
 
 
 Install
