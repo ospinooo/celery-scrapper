@@ -3,7 +3,7 @@ import time
 import tweepy
 
 from twitter import api
-from worker.app import process_tweet
+from app import process_tweet
 
 
 class TwitterStreamListener(tweepy.StreamListener):
@@ -14,12 +14,15 @@ class TwitterStreamListener(tweepy.StreamListener):
         return True
 
     def on_error(self, status):
-        print("err0r")
+
+        if status == 420:
+            print("Rate limit exceeded")
 
 
-trends_stream = TwitterStreamListener(api=api)
+trends_stream = TwitterStreamListener()
 
 stream = tweepy.Stream(
-    auth=api.auth, listener=trends_stream)
+    auth=api.auth,
+    listener=trends_stream)
 
 stream.filter(track=['python'])
